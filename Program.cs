@@ -7,7 +7,7 @@ namespace YandexMusic
     {
         static void Main(string[] args)
         {
-            new YandexAuth().Auth().GetAwaiter().GetResult();
+            new YandexAuth().GetAuthCookies().GetAwaiter().GetResult();
             Console.WriteLine("Hello World!");
         }
 
