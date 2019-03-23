@@ -15,11 +15,14 @@ namespace YandexMusic{
         private string urlAuth = "https://passport.yandex.ru/auth";
         private string userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36";
         
-        public YandexAuth(){}
+        public YandexAuth(){
+            
+        }
 
     
-        public async Task<IList<RestResponseCookie>> GetAuthCookies(){
+        public async Task Auth(){
             var client = new RestClient(urlAuth);
+            client.CookieContainer = Cookie.GetInstance().GetCookieContainer();
             var request = new RestRequest(Method.POST);
             request.AddHeader("Pragma", "no-cache");
             request.AddHeader("Cache-Control", "no-cache");
@@ -34,9 +37,7 @@ namespace YandexMusic{
             request.AddHeader("User-Agent", userAgent);
             request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
             request.AddParameter("undefined", $"login={login}&passwd={password}&retpath=&undefined=", ParameterType.RequestBody);
-            IRestResponse response = await client.ExecuteTaskAsync(request);
-            return response.Cookies;
+            await client.ExecuteTaskAsync(request);
         }
-
     }   
 }
