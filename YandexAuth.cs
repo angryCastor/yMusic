@@ -6,17 +6,27 @@ using HtmlAgilityPack;
 using System.Net.Http;
 using System.Collections.Generic; 
 using RestSharp;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.FileExtensions;
+using Microsoft.Extensions.Configuration.Json;
+using System.IO;
 
 namespace YandexMusic{
     class YandexAuth{
 
-        private string password = "3i912D65";
-        private string login = "astax419";
+        private string password = "";
+        private string login = "";
         private string urlAuth = "https://passport.yandex.ru/auth";
         private string userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36";
-        
+
         public YandexAuth(){
-            
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .Build();
+
+            password = config["yPass"];
+            login = config["yLogin"];
         }
 
     

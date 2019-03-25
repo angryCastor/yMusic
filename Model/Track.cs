@@ -1,5 +1,6 @@
 using System;
 
+
 namespace YandexMusic.Model{
     class Track{
         public int Id { get; set; } = 0;
@@ -8,5 +9,6 @@ namespace YandexMusic.Model{
         public string Title { get; set; } = "";
         public string StorageDir { get; set; } = "";
         public int AlbumId { get; set; } = 0;
+        public string Url { get; set; } = "";
     }
 }

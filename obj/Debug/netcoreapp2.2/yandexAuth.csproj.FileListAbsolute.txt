@@ -9,3 +9,14 @@
 /home/ilya/Documents/dotnet/yandexAuth/obj/Debug/netcoreapp2.2/yandexAuth.AssemblyInfo.cs
 /home/ilya/Documents/dotnet/yandexAuth/obj/Debug/netcoreapp2.2/yandexAuth.dll
 /home/ilya/Documents/dotnet/yandexAuth/obj/Debug/netcoreapp2.2/yandexAuth.pdb
+/var/dotnet/bin/Debug/netcoreapp2.2/yandexAuth.deps.json
+/var/dotnet/bin/Debug/netcoreapp2.2/yandexAuth.runtimeconfig.json
+/var/dotnet/bin/Debug/netcoreapp2.2/yandexAuth.runtimeconfig.dev.json
+/var/dotnet/bin/Debug/netcoreapp2.2/yandexAuth.dll
+/var/dotnet/bin/Debug/netcoreapp2.2/yandexAuth.pdb
+/var/dotnet/obj/Debug/netcoreapp2.2/yandexAuth.csprojAssemblyReference.cache
+/var/dotnet/obj/Debug/netcoreapp2.2/yandexAuth.csproj.CoreCompileInputs.cache
+/var/dotnet/obj/Debug/netcoreapp2.2/yandexAuth.AssemblyInfoInputs.cache
+/var/dotnet/obj/Debug/netcoreapp2.2/yandexAuth.AssemblyInfo.cs
+/var/dotnet/obj/Debug/netcoreapp2.2/yandexAuth.dll
+/var/dotnet/obj/Debug/netcoreapp2.2/yandexAuth.pdb

@@ -22,8 +22,5 @@ namespace YandexMusic{
                 instance = new RequestHelper();
             return instance;
         }
-
-       
-
     }
 }
