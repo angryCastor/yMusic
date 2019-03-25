@@ -24,7 +24,7 @@ namespace YandexMusic
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .Build();
-
+ 
             client = new MongoClient(config["conectionString"]);
             database = client.GetDatabase(config["dbName"]);
             collection = database.GetCollection<Track>(nameCollection);
